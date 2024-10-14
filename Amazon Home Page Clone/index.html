@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="main-assets/amazon-icon.png" />
+    <title>FZ's Amazon Home Page Clone</title>
+
+    <!--css file-->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="container ">
+            <div class="logo-container border-white">
+                <a href="#"><div class="logo"> </div></a>
+            </div>
+
+            <div class="address-container border-white">
+                <p class="deliver">Deliver to</p>
+                <div class="icon-address">
+                    <i class="fa-solid fa-location-dot icon-location"></i>
+                    <p>India</p>
+                </div>
+            </div>
+
+            <div class="search-container">
+                <select class="search-select">
+                    <option>All</option>
+                </select>
+                <input type="text" class="search-input" />
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+            </div>
+
+
+            <div class="login-container border-white">
+                <p><span>Hello,sign in</span></p>
+                <p class="account">Account & Lists</p>
+            </div>
+
+            <div class="return-order-container">
+                <p><span>Returns &</span></p>
+                <p><div class="account">Orders</div> </p>
+            </div>
+
+            <div class="cart-container border-white">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Cart
+            </div>
+        </div>
+    </header>
+
+    <!--navigation-->
+    <nav class="nav">
+        <div class="container container-nav">
+            <ul>
+                <li class="border-white" id="open-nav-sidebar">
+                    <span class="open-nav-slider" style="font-size: larger;">
+                        <i class="fa-solid fa-bars"></i>
+                        All
+                    </span>
+                </li>
+                <li class="border-white"><a href="#">Best Sellers</a></li>
+                <li class="border-white"><a href="#">Today's Deals</a></li>
+                <li class="border-white"><a href="#">Mobiles</a></li>
+                <li class="border-white"><a href="#">Customer Service</a></li>
+                <li class="border-white"><a href="#">Electronic</a></li>
+                <li class="border-white"><a href="#">Home & Kitchen</a></li>
+                <li class="border-white"><a href="#">Fashion</a></li>
+                <li class="border-white"><a href="#">Book</a></li>
+                <li class="border-white"><a href="#">Prime</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--sidebar navigation-->
+    <div class="sidebar-container-navigation" id="sidebar-container-navigation-id">
+        <div class="sidebar-left-part">
+            <div class="sidebar-top">
+                <i class="fa-solid fa-circle-user"></i>
+                <h2>Hello, <span>sign in</span></h2>
+            </div>
+            <div class="sidebar-wrap">
+                <div class="sidebar-item">
+                    <h2>Trending</h2>
+                    <p>Best Sellers</p>
+                    <p>New Releases</p>
+                    <p>Movers and Shakers</p>
+                </div>
+                <div class="sidebar-item">
+                    <h2>Digital Content And Devices</h2>
+                    <p>Echo & Alexa</p>
+                    <p>Fire TV</p>
+                    <p>Kindle E-Readers & eBooks</p>
+                    <p>Audible Audiobooks</p>
+                    <p>Amazon Prime Video</p>
+                    <p>Amazon Prime Music</p>
+                </div>
+                <div class="sidebar-item">
+                    <h2>Shop By Category</h2>
+                    <p>Mobiles, Computes</p>
+                    <p>TV, Appliances, Electronic</p>
+                    <p>Men's Fashion</p>
+                    <p>Women's Fashion</p>
+                    <p>See All</p>
+                </div>
+                <div class="sidebar-item">
+                    <h2>Programs & Features</h2>
+                    <p>Gift Cards & Mobile Recharges</p>
+                    <p>Flight Tickets</p>
+                    <p>#Foundlt-OnAmazon</p>
+                    <p>Clearance store</p>
+                </div>
+                <div class="sidebar-item">
+                    <h2>Help & Settings</h2>
+                    <p>Your Account</p>
+                    <p>Customer Service</p>
+                    <p>Sign in</p>
+                </div>
+            </div>
+        </div>
+        <button id="sidebar-navigation-close">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+<script>
+    const sidebarNavigationEl = document.getElementById("sidebar-container-navigation-id")
+const sidebarOpenNavigationEl = document.getElementById("open-nav-sidebar")
+const sidebarCloseNavigationEl = document.getElementById("sidebar-navigation-close")
+
+
+//  console.log(sidebarNavigationEl)
+
+sidebarOpenNavigationEl.addEventListener("click", () => {
+    sidebarNavigationEl.classList.toggle("slidebar-show")
+})
+sidebarCloseNavigationEl.addEventListener("click", () => {
+    sidebarNavigationEl.classList.toggle("slidebar-show")
+})
+</script>
+
+
+
+<!-- image slider -->
+<section>
+  <div class="image-container">
+      <div class="image-list">
+          <div class="image-item">
+            <a href="#">
+              <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/march/brands/GW/Under_1499_Tallhero_3000x1200._CB561212093_.jpg" alt="bluetooth" /></a>
+          </div>
+      <div class="image-btn-container">
+          <button class="slider-btn" id="slide-btn-left"><i class="fa-solid fa-chevron-left" ></i></button>
+          <button class="slider-btn" id="slide-btn-right"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+  </div>
+</section>
+
+<div class="cards">
+    <!-- card 1 -->
+    <div class="card">
+      <div class="cardHeading">
+        Bluetooth Calling Smartwatch starts at ₹1,999
+      </div>
+      <div class="product">
+        <a href="#"><img src="https://m.media-amazon.com/images/I/61AHiYyu3ZL._AC_UL480_FMwebp_QL65_.jpg" alt="bluetooth"  style="padding-bottom: 30px; height: 350px; width: 250px;"/></a></div>
+      <a href="#">Shop Now</a>
+    </div>
+    <!-- card 2 -->
+    <div class="card">
+      <div class="cardHeading">Revamp your home in style</div>
+      <div class="cardContainer">
+
+        <div class="product">
+          <img  src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2024/Gateway/BTFGW/PCQC/New/1x/final/186x116_Home_furnishings_2._SY116_CB555624324_.jpg" alt="" />
+          <p>Cushions covers, bedsheet & more</p>
+        </div>
+
+        <div class="product">
+          <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2024/Gateway/BTFGW/PCQC/New/1x/final/186x116_Home_decor_1._SY116_CB555624324_.jpg" alt="" />
+          <p>Figurines, vases & more</p>
+        </div>
+
+        <div class="product">
+          <img  src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2024/Gateway/BTFGW/PCQC/New/1x/final/186x116_Home_storage_1._SY116_CB555624324_.jpg" alt="" />
+          <p>Home storage</p>
+        </div>
+
+        <div class="product">
+          <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2024/Gateway/BTFGW/PCQC/New/1x/final/186x116_Home_lighting_2._SY116_CB555624324_.jpg" alt="" />
+          <p>Lighting solutions</p>
+        </div>
+      </div>
+      <a href="#">Explore all</a>
+    </div>
+    <!-- card 3 -->
+    <div class="card">
+      <div class="cardHeading">Top mobile accessories for your smartphone</div>
+      <div class="cardContainer">
+
+        <div class="product">
+          <img  src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/WLA/2023/MSOREFRESHDESKTOP/D87165616_IN_WLA_BAU_MSO_REFRESH-desktop-version_PC_QuadCard_186X116_3X3._SY116_CB602731451_.jpg" alt="" />
+          <p>Head Sets</p>
+        </div>
+
+        <div class="product">
+          <img  src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/WLA/2023/MSOREFRESHDESKTOP/D87165616_IN_WLA_BAU_MSO_REFRESH-desktop-version_PC_QuadCard_186X116_2X2._SY116_CB602731451_.jpg" alt="" />
+          <p>Cables and charges</p>
+        </div>
+
+        <div class="product">
+          <img  src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/WLA/2023/MSOREFRESHDESKTOP/D87165616_IN_WLA_BAU_MSO_REFRESH-desktop-version_PC_QuadCard_186X116_1X1._SY116_CB602731451_.jpg" alt="" />
+          <p>Cases and Covers</p>
+        </div>
+
+        <div class="product">
+          <img  src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/WLA/2023/MSOREFRESHDESKTOP/D87165616_IN_WLA_BAU_MSO_REFRESH-desktop-version_PC_QuadCard_186X116_4X4._SY116_CB602731451_.jpg" alt="" />
+          <p>Power Banks</p>
+        </div>
+      </div>
+      <a href="#">See all offers</a>
+    </div>
+    <!-- card 4 -->
+    <div class="card">
+      <div class="cardHeading">Up to 70% off | Styles for men & Women</div>
+      <div class="cardContainer">
+
+        <div class="product">
+          <img  src="assets/C1.jpg" alt="clothes" />
+          <p>Clothing</p>
+        </div>
+
+        <div class="product">
+          <img src="assets/C2.jpg" alt="Footwear" />
+          <p>Footwear</p>
+        </div>
+
+        <div class="product">
+          <img  src="assets/C3.jpg" alt="watches" />
+          <p>Watches</p>
+        </div>
+
+        <div class="product">
+          <img  src="assets/C4.jpg" alt="bag" />
+          <p>Bags &amp; wallet</p>
+        </div>
+      </div>
+      <a href="#">Mega Fashion Days</a>
+    </div>
+    <!-- card 5 -->
+    <div class="card">
+      <div class="cardHeading">
+        Starting ₹99 | All your home improvement needs
+      </div>
+      <div class="cardContainer">
+        <div class="product">
+
+          <img  src="assets/E1.jpg" alt="Gaming" />
+          <p>Gaming Accessories</p>
+        </div>
+
+        <div class="product">
+          <img src="assets/E2.jpg" alt="Keyboard" />
+          <p>Keyboard and Mice</p>
+        </div>
+
+        <div class="product">
+          <img src="assets/E3.jpg" alt="Stands" />
+          <p>Stands, Cables &amp; more</p>
+        </div>
+
+        <div class="product">
+          <img  src="assets/E4.jpg" alt="Backpacks" />
+          <p>Backpacks</p>
+        </div>
+      </div>
+      <a href="">See all offers</a>
+    </div>
+    <!-- card 6 -->
+    <div class="card">
+      <div class="cardHeading">Up to 70% off | Styles for women</div>
+      <div class="cardContainer">
+
+        <div class="product">
+          <img src="assets/F1.jpg" alt="women clothing" />
+          <p>Women's Clothing</p>
+        </div>
+
+        <div class="product">
+          <img  src="assets/F2.jpg" alt="Handbags" />
+          <p>Footwear + Handbags</p>
+        </div>
+
+        <div class="product">
+          <img  src="assets/F3.jpg" alt="watches" />
+          <p>Watches</p>
+        </div>
+
+        <div class="product">
+          <img  src="assets/F4.jpg" alt="Fashion jewellery" />
+          <p>Fashion jewellery</p>
+        </div>
+      </div>
+      <a href="#">Mega Fashion Days</a>
+    </div>
+    <!-- card 7 -->
+    <div class="card">
+      <div class="cardHeading">
+        Appliances for your home | Up to 55% off
+      </div>
+      <div class="cardContainer">
+
+        <div class="product">
+          <img src="assets/G1.jpg" alt="ac" />
+          <p>Air conditioners</p>
+        </div>
+
+        <div class="product">
+          <img  src="assets/G2.jpg" alt="Refrigerators" />
+          <p>Refrigerators</p>
+        </div>
+
+        <div class="product">
+          <img  src="assets/G3.jpg" alt="Microwaves" />
+          <p>Microwaves</p>
+        </div>
+        
+        <div class="product">
+          <img  src="assets/G4.jpg" alt="Washing machines" />
+          <p>Washing machines</p>
+        </div>
+      </div>
+      <a href="#">See more</a>
+    </div>
+    <!-- card 8 -->
+    <div class="card">
+        <div class="cardHeading">
+            Only at ₹299 | Aesthetic bohemian room decor
+        </div>
+        <div class="product">
+          <img src="https://images-eu.ssl-images-amazon.com/images/G/31/12407722031/nss/NSSApril/MARUTI-ISHT_DT_CC_379x6304._SY304_CB556767229_.jpg" alt="" style="height: 300px;"/></div>
+        <a href="#">See more</a>
+      </div>
+    </div>
+    
+      <div class="newUser">
+        <div class="newcustomer">
+          <div>See personalized recommendations</div>
+          <a href="Signin.html"><button>Sign in</button></a>
+          <p>New customer? <a href="">Start here.</a></p>
+        </div>
+      </div>
+    
+      <div class="backTop">
+        <i class="fa-solid fa-caret-up"></i>
+        <a href="#">Back to top</a>
+        <a href="#">TOP OF PAGE</a>
+      </div>
+    
+      <div class="socialHandle">
+        <div class="sh-part-1">
+          <ul>
+            <li>Get to Know Us</li>
+            <li>About Us</li>
+            <li>Careers</li>
+            <li>Press Releases</li>
+            <li>Amazon Science</li>
+          </ul>
+          <ul>
+            <li>Connect with US</li>
+            <li>Facbook</li>
+            <li>Twitter</li>
+            <li>Instagram</li>
+          </ul>
+          <ul>
+            <li>Make Money with Us</li>
+            <li>Sell on Amazon</li>
+            <li>Sell under Amazon Accelerator</li>
+            <li>Protect and Build Your Brand</li>
+            <li>Amazon Global Selling</li>
+            <li>Become an Affilate</li>
+            <li>Fulfilment by Amazon</li>
+            <li>Advertise Your Products</li>
+            <li>Amazon Pay on Merchants</li>
+          </ul>
+          <ul>
+            <li>Let Us Help You</li>
+            <li>COVID-19 and Amazon</li>
+            <li>Your Account</li>
+            <li>Returns centre</li>
+            <li>100% Purchase Protection</li>
+            <li>Amazon App Download</li>
+            <li>Help</li>
+          </ul>
+        </div>
+        <div class="sh-part-2">
+          <div class="foot-logo">
+            <img decoding="async" src="main-assets/logo.png" alt="" />
+            <button>
+              <i class="fa-solid fa-globe"></i>
+              English
+              <i class="fa-solid fa-sort"></i>
+            </button>
+          </div>
+          <div class="locations">
+            <span>Australia</span>
+            <span>Brazil</span>
+            <span>Canada</span>
+            <span>China</span>
+            <span>France</span>
+            <span>Germany</span>
+            <span>Itlay</span>
+            <span>Japan</span>
+            <span>Mexico</span>
+            <span>Netherlands</span>
+            <span>Poland</span>
+            <span>Singapore</span>
+            <span>Spain</span>
+            <span>Turkey</span>
+            <span>United Arab Emirates</span>
+            <span>United Kingdom</span>
+            <span>United States </span>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>          
