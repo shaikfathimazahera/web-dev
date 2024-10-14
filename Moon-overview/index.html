@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assests/icon.png">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="sign-up-page">
+
+    <marquee behavior="scroll" direction="left">
+       <span> Note </span>: No information will be transmitted. This project showcases the linking of two web pages, understanding tables, form and the functionality of margin and padding.
+    </marquee>
+
+
+    <table class="sign-up-table">
+        <tr>
+            <th colspan="2" class="sign-up-h">Sign Up</th>
+        </tr>
+        <tr>
+            <td>Full Name</td>
+            <td><input type="text" name="Full Name" required></td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td>
+                <input type="radio" name="Gender" value="Male"> Male
+                <input type="radio" name="Gender" value="Female"> Female
+            </td>
+        </tr>
+        <tr>
+            <td>Date of Birth</td>
+            <td><input type="date" name="dob"></td>
+        </tr>
+        <tr>
+            <td>Email ID</td>
+            <td><input type="email" name="EmailID" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="fathimaz@gmail.com" required>
+            </td>
+        </tr>
+        <tr>
+            <td>Mobile Number</td>
+            <td><input type="text" name="MobileNumber" maxlength="10"></td>
+        </tr>
+        <tr>
+            <td>Qualification</td>
+            <td>
+                <select name="Qualification" id="Qualification">
+                    <option value="Secondary">Secondary</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Graduation">Graduation</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Course</td>
+            <td>
+                <input type="radio" name="Course" value="BCA"> BCA
+                <input type="radio" name="Course" value="B.Com"> B.Com
+                <input type="radio" name="Course" value="B.Sc"> B.Sc
+            </td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input type="password" name="password" required></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="sign-up-btn">
+                <a href="moon-overview.html"><input type="submit" value="Sign Up"></a>
+                <input type="reset" value="Reset">
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
