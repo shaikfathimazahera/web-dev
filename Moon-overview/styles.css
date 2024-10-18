@@ -80,7 +80,8 @@ marquee span{
 @media (max-width: 680px) {
     .sign-up-table{
         margin-top:25%;
-        margin-left: 6%;
+        margin-left: 5%;
+        width: 300px;
     }
 }
  
